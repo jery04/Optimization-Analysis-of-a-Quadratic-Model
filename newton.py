@@ -27,9 +27,8 @@ def newton_quadratic(Q, c, x0=None):
     info = np.vstack([x0, x1])  # trayectoria: inicio y final
     return x1, info
 
-
 # -----------------------------------
-# Finalmente, del papel al procesador
+# Prueba del método de Newton
 # -----------------------------------
 if __name__ == "__main__":
     Q = np.array([[10., 6.],[6., 4.]])  

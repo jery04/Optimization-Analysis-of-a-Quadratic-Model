@@ -99,9 +99,9 @@ def maximo_descenso_optimo(Q, c, x0, tol=1e-8, max_iter=1000, verbose=False):
 
     return x, info
 
-# -----------------------------------
-# Finalmente, del papel al procesador
-# -----------------------------------
+# -------------------------------------------
+# Prueba del método de máximo descenso óptimo
+# -------------------------------------------
 if __name__ == "__main__":
     Q = np.array([[10., 6.],
                   [6., 4.]])
