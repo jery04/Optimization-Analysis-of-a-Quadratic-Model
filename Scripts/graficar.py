@@ -1,10 +1,10 @@
-import numpy as np  # Operaciones numéricas con arrays.
 from __future__ import annotations  # Mejora las anotaciones de tipo.
 from typing import Callable, Optional  # Tipos para funciones y valores opcionales.
-import matplotlib.pyplot as plt  # Gráficos y visualizaciones.
-import matplotlib.colors as mcolors  # Manejo de colores en gráficos.
 from max_descenso import maximo_descenso_optimo  # Algoritmo de descenso óptimo.
 from newton import newton_quadratic  # Método de Newton para funciones cuadráticas.
+import numpy as np  # Operaciones numéricas con arrays.
+import matplotlib.pyplot as plt  # Gráficos y visualizaciones.
+import matplotlib.colors as mcolors  # Manejo de colores en gráficos.
 
 def graficar_superficie(
         f: Callable[[np.ndarray, np.ndarray], np.ndarray],

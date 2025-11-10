@@ -3,8 +3,7 @@ import numpy as np  # Operaciones numéricas con arrays.
 from typing import Callable, Optional  # Tipos para funciones y valores opcionales.
 import matplotlib.pyplot as plt  # Gráficos y visualizaciones.
 import matplotlib.colors as mcolors  # Manejo de colores en gráficos.
-from max_descenso import maximo_descenso_optimo  # Algoritmo de descenso óptimo.
-from newton import newton_quadratic  # Método de Newton para funciones cuadráticas.
+# Nota: Usamos las implementaciones locales de los métodos definidas en este mismo archivo.
 
 #-----------------------------------
 # Métodos de optimización
@@ -344,9 +343,7 @@ if __name__ == "__main__":
     print("[Máximo descenso] Valor mínimo f(x*):", f_xmin)
     print("[Máximo descenso] Trayectoria (xs):\n", info.get("xs"))
 
-    # ======================
     # Graficar superficie 3D de la función
-    # ======================
     graficar_superficie(
         f,
         xlim=(-500.0, 500.0),
@@ -360,9 +357,7 @@ if __name__ == "__main__":
         expand=1.0
     )
 
-    # ======================
     # Trayectoria sobre contornos (Máximo descenso)
-    # ======================
     puntos_descenso_raw = info.get("ws", info.get("xs"))
     puntos_descenso = [tuple(row[:2]) for row in np.asarray(puntos_descenso_raw, dtype=float)]
     graficar_trayectoria(
@@ -385,9 +380,7 @@ if __name__ == "__main__":
         mostrar_etiquetas_nivel=True
     )
 
-    # ======================
     # Método de Newton (cuadrático)
-    # ======================
     x_newton, xs_newton = newton_quadratic(Q, c, x0)
     f_xnewton = 0.5 * x_newton @ (Q @ x_newton) + c @ x_newton + r
     print("\n[Newton] Punto óptimo (una iteración):", x_newton)
@@ -414,4 +407,3 @@ if __name__ == "__main__":
         marcador_fin='s',
         mostrar_etiquetas_nivel=True
     )
-    
