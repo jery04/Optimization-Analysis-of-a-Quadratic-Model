@@ -235,8 +235,8 @@ if __name__ == '__main__':
     graficar_trayectoria(
         puntos=puntos_demo,
         f=f,
-        xlim=(-5.0, 10.0),
-        ylim=(-5.0, 10.0),
+        xlim=(x0[0] - 10.0, x0[0] + 10.0),
+        ylim=(x0[1] - 10.0, x0[1] + 10.0),
         n=200,
         levels=35,
         xlabel='x', ylabel='y',
@@ -262,8 +262,8 @@ if __name__ == '__main__':
     graficar_trayectoria(
         puntos=puntos_newton,
         f=f,
-        xlim=(-5.0, 10.0),
-        ylim=(-5.0, 10.0),
+        xlim=(x0[0] - 10.0, x0[0] + 10.0),
+        ylim=(x0[1] - 10.0, x0[1] + 10.0),
         n=200,
         levels=35,
         xlabel='x', ylabel='y',
