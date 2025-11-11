@@ -7,7 +7,7 @@ A small, visual, and hands-on project to study unconstrained optimization of a q
 ## 🌟 Introduction
 This repository explores the minimization of a convex quadratic function of the form
 
-- $$ f(x) = 1/2 xᵀ Q x + cᵀ x + r $$
+- f(x) = 1/2 xᵀ Q x + cᵀ x + r
 
 In this project, the specific scalar function we analyze is:
 
