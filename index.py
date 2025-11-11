@@ -3,12 +3,10 @@ import numpy as np  # Operaciones numéricas con arrays.
 from typing import Callable, Optional  # Tipos para funciones y valores opcionales.
 import matplotlib.pyplot as plt  # Gráficos y visualizaciones.
 import matplotlib.colors as mcolors  # Manejo de colores en gráficos.
-# Nota: Usamos las implementaciones locales de los métodos definidas en este mismo archivo.
 
 #-----------------------------------
 # Métodos de optimización
 #-----------------------------------
-
 def maximo_descenso_optimo(Q, c, x0, tol=1e-8, max_iter=1000, verbose=False):
     """
     Máximo descenso para f(x) = 1/2 x^T Q x + c^T x + r
@@ -352,7 +350,7 @@ if __name__ == "__main__":
         xlabel='x', ylabel='y', zlabel='f(x,y)',
         title='Superficie: f(x,y) = (x + y - 7)^2 + (2x + y - 5)^2',
         cmap='Spectral_r',
-        elev=35, azim=-60,
+        elev=38, azim=-110,
         dist=20,   # vista alejada
         expand=1.0
     )
@@ -385,6 +383,7 @@ if __name__ == "__main__":
     f_xnewton = 0.5 * x_newton @ (Q @ x_newton) + c @ x_newton + r
     print("\n[Newton] Punto óptimo (una iteración):", x_newton)
     print("[Newton] Valor mínimo f(x*):", f_xnewton)
+    print("[Newton] Trayectoria (xs):\n", xs_newton)
 
     # Graficar trayectoria de Newton sobre los mismos contornos
     puntos_newton = [tuple(row[:2]) for row in np.asarray(xs_newton, dtype=float)]

@@ -6,6 +6,9 @@ import numpy as np  # Operaciones numéricas con arrays.
 import matplotlib.pyplot as plt  # Gráficos y visualizaciones.
 import matplotlib.colors as mcolors  # Manejo de colores en gráficos.
 
+# -------------------------------------
+# Métodos de graficación y traycetorias
+# -------------------------------------
 def graficar_superficie(
         f: Callable[[np.ndarray, np.ndarray], np.ndarray],
         xlim: tuple[float, float] = (-3.0, 3.0),
@@ -209,7 +212,7 @@ if __name__ == '__main__':
         xlabel='x', ylabel='y', zlabel='f(x,y)',
         title='Superficie: f(x,y) = (x + y - 7)^2 + (2x + y - 5)^2',
         cmap='Spectral_r',
-        elev=35, azim=-60,
+        elev=38, azim=-110,
         dist=20,   # vista alejada
         expand=1.0
     )
@@ -249,10 +252,7 @@ if __name__ == '__main__':
         mostrar_etiquetas_nivel=True
     )
 
-    # ==============================
     # Método de Newton (cuadrático)
-    # ==============================
-    # Ejecutar Newton para el mismo problema cuadrático
     x_newton, xs_newton = newton_quadratic(Q, c, x0)
 
     # Convertir trayectoria a lista de tuplas (x, y)
